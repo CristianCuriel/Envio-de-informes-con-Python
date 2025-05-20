@@ -11,13 +11,13 @@ class ExcelReportExporter:
         os.makedirs(self.carpeta_excel, exist_ok=True)
 
         self.colores_estado = {
-            'Cambio': 'C6EFCE',
-            'Reparacion': 'C6EFCE',
-            'Nota credito': 'C6EFCE',
-            'No aplica a garantia': 'FFC7CE',
-            'Fuera de garantia': 'FFC7CE',
-            'devuelto': 'FFC7CE',
-            'En proceso': 'FFEB9C',
+            'Cambio': '93c47d',
+            'Reparacion': '93c47d',
+            'Nota credito': '93c47d',
+            'No aplica a garantia': 'e85c5d',
+            'Fuera de garantia': 'e85c5d',
+            'devuelto': 'e85c5d',
+            'En proceso': 'dfd897',
         }
 
     def exportar(self, nombre_sede: str, df_sede) -> tuple[bool, str]:

@@ -33,38 +33,57 @@ def _cuerpo_msg(sede:str) -> str:
     # Cuerpo del mensaje
 
     body_msg = f"""
-            <html>
-            <body style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
-                <h2 style="color: #2e6c80;">📊 REPORTE DE GARANTIAS - SEDE HLTB {sede.upper()}</h2>
+                <body style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
 
-                <p>Estimado equipo de ventas,</p>
+                        <h2 style="color: #2e6c80;">📊 REPORTE DE GARANTÍAS - SEDE HLTB {sede}</h2>
 
-                <p>
-                    Adjunto encontrarán el reporte actualizado de las garantías registradas en el formulario oficial de la empresa. 
-                    Este informe corresponde a las solicitudes recibidas durante los últimos dos meses para la sede <b>{sede}</b>.
-                </p>
+                        <p>Estimado equipo de ventas,</p>
 
-                <p>
-                    Les agradecemos revisar el documento adjunto y realizar el seguimiento correspondiente.
-                    Si tienen alguna observación o requieren soporte adicional, no duden en contactarme.
-                </p>
+                        <p>
+                            Adjunto encontrarán el reporte actualizado de las garantías registradas en el formulario oficial de la empresa. 
+                            Este informe contiene los registros de los últimos <b>dos meses</b> correspondientes a la sede <b>{sede}</b>.
+                        </p>
 
-                <p style="font-style: italic; color: #555;">
-                    Por favor, revisar el archivo adjunto para más detalles.
-                </p>
+                        <p>
+                            A continuación, se describen las categorías de estado de las garantías representadas por colores en el reporte:
+                        </p>
 
-                <br>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li>
+                                <span style="display: inline-block; width: 12px; height: 12px; background-color: #c6efce; border: 1px solid #ccc ;border-radius: 50%; margin-right: 8px;"></span>
+                                <strong>Verde:</strong> El caso ha sido cerrado de manera exitosa. (Aplicó a garantía)
+                            </li>
+                            <li>
+                                <span style="display: inline-block; width: 12px; height: 12px; background-color: #fff2cc; border: 1px solid #ccc ;border-radius: 50%; margin-right: 8px;"></span>
+                                <strong>Amarillo:</strong> El caso está en proceso o trámite con el proveedor. (En espera de RMA o respuesta de casa matriz)
+                            </li>
+                            <li>
+                                <span style="display: inline-block; width: 12px; height: 12px; background-color: #e85c5d; border: 1px solid #ccc; border-radius: 50%; margin-right: 8px;"></span>
+                                <strong>Rojo:</strong> El caso aún no ha sido tramitado.
+                            </li>
+                            <li>
+                                <span style="display: inline-block; width: 12px; height: 12px; background-color: #ffffff; border: 1px solid #ccc; border-radius: 50%; margin-right: 8px;"></span>
+                                <strong>Blanco:</strong> El caso aún no ha sido tramitado.
+                            </li>
+                        </ul>
 
-                <p>Saludos cordiales,</p>
+                        <p>
+                            Les agradecemos revisar el documento adjunto y realizar el seguimiento correspondiente. 
+                            Si tienen alguna observación o requieren soporte adicional, no duden en comunicarse conmigo.
+                        </p>
 
-                <p>
-                    <b>Cristian Curiel Camargo</b><br>
-                    Líder de garantías en Heliteb SAS<br>
-                    📞 317 218 5359<br>
-                    ✉️ <a href="mailto:garantias@heliteb.com.co">garantias@heliteb.com.co</a>
-                </p>
-            </body>
-            </html>
+                        <br>
+
+                        <p>Saludos cordiales,</p>
+
+                        <p>
+                            <strong>Cristian Curiel Camargo</strong><br>
+                            Líder de garantías en Heliteb SAS<br>
+                            📞 317 218 5359<br>
+                            ✉️ <a href="mailto:garantias@heliteb.com.co">garantias@heliteb.com.co</a>
+                        </p>
+
+                    </body>
 
         """
 
