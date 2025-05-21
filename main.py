@@ -1,4 +1,6 @@
-from app_runner import run
+from app.main_menu import Menu
+
 
 if __name__ == "__main__":
-    run()
+    menu = Menu()
+    menu.ejecutar_opcion()
