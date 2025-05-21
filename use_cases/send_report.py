@@ -20,7 +20,7 @@ class SendReportUseCase:
                 if correo_destino:
                    status =  self.email_sender.send_email(
                         to_email=correo_destino,
-                        subject=f"Reporte de garantias - {sede}",
+                        subject=f"Reporte de garantias - {sede.upper()}",
                         body = _cuerpo_msg(sede = sede, op=op),
                         file_path=os.path.join(ruta_archivos, archivo)
                     )
@@ -36,13 +36,13 @@ def _cuerpo_msg(sede:str, op:int) -> str:
         body_msg = f"""
                     <body style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
 
-                            <h2 style="color: #2e6c80;">📊 REPORTE DE GARANTÍAS - SEDE HLTB {sede}</h2>
+                            <h2 style="color: #2e6c80;">📊 REPORTE DE GARANTÍAS - SEDE HLTB {sede.upper()}</h2>
 
                             <p>Estimado equipo de ventas,</p>
 
                             <p>
                                 Adjunto encontrarán el reporte actualizado de las garantías registradas en el formulario oficial de la empresa. 
-                                Este informe contiene los registros de los últimos <b>dos meses</b> correspondientes a la sede <b>{sede}</b>.
+                                Este informe contiene los registros de los últimos <b>dos meses</b> correspondientes a la sede <b>{sede.upper()}</b>.
                             </p>
 
                             <p>
@@ -100,13 +100,13 @@ def _cuerpo_msg(sede:str, op:int) -> str:
         body_msg = f"""
                     <body style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
 
-                            <h2 style="color: #2e6c80;">📊 REPORTE DE GARANTÍAS - SEDE HLTB {sede}</h2>
+                            <h2 style="color: #2e6c80;">📊 REPORTE DE GARANTÍAS - SEDE HLTB {sede.upper()}</h2>
 
                             <p>Estimado equipo de ventas,</p>
 
                             <p>
                                 Adjunto encontrarán el reporte actualizado de las garantías registradas en el formulario oficial de la empresa. 
-                                Este informe contiene los registros de <b>todas las garantias montadas en lo corrido del 2025 </b> correspondientes a la sede <b>{sede}</b>.
+                                Este informe contiene los registros de <b>todas las garantias montadas en lo corrido del 2025 </b> correspondientes a la sede <b>{sede.upper()}</b>.
                             </p>
 
                             <p>
